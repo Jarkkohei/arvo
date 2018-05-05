@@ -4,7 +4,6 @@ npm start
 
 Todos:
   - Region icons
-  - Disable "Save"-button if amount == storaged
   - Branch for dev and features
   - spinner
   - backdrop
@@ -12,6 +11,6 @@ Todos:
   - Firebase
   - Routing
   - Settings
-  
 
-
+  Dones:
+  - Disable "Save"-button if amount == storaged
