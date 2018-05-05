@@ -12,7 +12,7 @@ class Saving extends Component {
         return (
             <Row style={ style.row }>
                 <Col xs={12} style={ style.col }>
-                    <Button onClick={ this.handleSave } bsSize="large" bsStyle="success" style={ style.btn }>Tallenna</Button>
+                    <Button onClick={ this.handleSave } bsSize="large" bsStyle="success" style={ style.btn } disabled={ this.props.upToDate }>Tallenna</Button>
                 </Col>
             </Row>
         )
