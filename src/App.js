@@ -16,7 +16,8 @@ class App extends Component {
         amount: 0,
         sisHinta: 0,
         seutuHinta: 0,
-        limit: 0
+        limit: 0,
+        upToDate: true
     };
 
     componentWillMount = () => {
@@ -37,12 +38,15 @@ class App extends Component {
     };
 
     plusAmount = (plus) => {
+        this.setState({ upToDate: false});
+        
         let newAmount = this.state.amount + plus;
         newAmount = parseFloat(newAmount.toFixed(2));
         return this.setState({ amount: newAmount });
     };
 
     minusAmount = (type) => {
+        this.setState({ upToDate: false});
 
         let newAmount = 0;
 
@@ -63,6 +67,7 @@ class App extends Component {
 
     store = () => {
         console.log('App.saveAmount');
+        this.setState({ upToDate: true});
         localStorage.setItem('data', JSON.stringify(this.state));
     };
 
@@ -83,7 +88,7 @@ class App extends Component {
                         sisMatkat={ this.getSisMatkat() } 
                         seutuMatkat={ this.getSeutuMatkat() } />
 
-                    <Saving store={ this.store }/>
+                    <Saving store={ this.store } upToDate={this.state.upToDate}/>
                 </Grid>
             </div>
         );
