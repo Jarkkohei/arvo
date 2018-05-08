@@ -3,8 +3,6 @@ npm install
 npm start
 
 Todos:
-  - Region icons
-  - Branch for dev and features
   - spinner
   - backdrop
   - "onnistui" -ilmoitus
@@ -12,5 +10,9 @@ Todos:
   - Routing
   - Settings
 
-  Dones:
+Dones:
   - Disable "Save"-button if amount == storaged
+  - Branch for dev and features
+
+NotTodos:
+  - Region icons
