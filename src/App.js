@@ -14,9 +14,9 @@ class App extends Component {
     
     state = {
         amount: 0,
-        sisHinta: 0,
-        seutuHinta: 0,
-        limit: 0,
+        sisHinta: 2.20,
+        seutuHinta: 4.20,
+        limit: 10,
         upToDate: true
     };
 
@@ -25,7 +25,7 @@ class App extends Component {
         let newState = JSON.parse(localStorage.getItem('data'));
 
         if(newState) {
-            this.setState({...newState});
+            this.setState({...newState, upToDate: true });
         }
     };
 
