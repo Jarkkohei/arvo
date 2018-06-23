@@ -22,11 +22,15 @@ class App extends Component {
 
     componentWillMount = () => {
         console.log('App.componentWillMount');
-        let newState = JSON.parse(localStorage.getItem('data'));
 
-        if(newState) {
-            this.setState({...newState, upToDate: true });
+        if (localStorage.getItem("arvo_data") !== null) {
+            let newState = JSON.parse(localStorage.getItem('arvo_data'));
+
+            if(newState) {
+                this.setState({...newState, upToDate: true });
+            }
         }
+        
     };
 
     getSeutuMatkat = () => {
@@ -38,7 +42,7 @@ class App extends Component {
     };
 
     plusAmount = (plus) => {
-        this.setState({ upToDate: false});
+        this.setState({ upToDate: false });
         
         let newAmount = this.state.amount + plus;
         newAmount = parseFloat(newAmount.toFixed(2));
@@ -46,7 +50,7 @@ class App extends Component {
     };
 
     minusAmount = (type) => {
-        this.setState({ upToDate: false});
+        this.setState({ upToDate: false });
 
         let newAmount = 0;
 
@@ -67,8 +71,8 @@ class App extends Component {
 
     store = () => {
         console.log('App.saveAmount');
-        this.setState({ upToDate: true});
-        localStorage.setItem('data', JSON.stringify(this.state));
+        this.setState({ upToDate: true });
+        localStorage.setItem('arvo_data', JSON.stringify(this.state));
     };
 
 
