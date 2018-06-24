@@ -8,6 +8,7 @@ import Amount from './components/Amount';
 import Adding from './components/Adding';
 import Consuming from './components/Consuming';
 import Saving from './components/Saving';
+import Navigationbar from './components/Navigationbar';
 
 class App extends Component {
 
@@ -80,6 +81,8 @@ class App extends Component {
         return (
             <div className="App">
                 <Grid>
+                    <Navigationbar />
+
                     <Amount  
                         amount={ this.state.amount }
                         underLimit={ this.state.amount < this.state.limit }/>
