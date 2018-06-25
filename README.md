@@ -1,18 +1,30 @@
-npm install
+## Install:
 
-npm start
+  `$ npm install`
 
-Todos:
+## Start:
+
+  `$ npm start`
+
+#
+
+## Todos:
   - spinner
   - backdrop
   - "onnistui" -ilmoitus
   - Firebase
-  - Routing
-  - Settings
+  - Welcome-page
+  - Settings-page
+  - About-page
 
-Dones:
+## Dones:
   - Disable "Save"-button if amount == storaged
   - Branch for dev and features
+  - Add NavBar
+  - Implement Routing (react-router, react-router-dom and react-router-bootstrap)
+  - Add Welcome-, Settings- and About-views
 
-NotTodos:
+## NotTodos:
   - Region icons
+
+#
