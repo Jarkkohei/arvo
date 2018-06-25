@@ -5,7 +5,7 @@ import { Navbar, Nav, NavItem } from 'react-bootstrap';
 class Navigationbar extends Component {
   render() {
     return (
-        <Navbar collapseOnSelect fluid>
+        <Navbar collapseOnSelect fixedTop fluid>
             <Navbar.Header>
                 <Navbar.Brand><a href="#brand">A</a></Navbar.Brand>
 
@@ -16,11 +16,10 @@ class Navigationbar extends Component {
                 <Nav>
                     <NavItem eventKey={1} href="#">Pääsivu</NavItem>
                     <NavItem eventKey={2} href="#">Asetukset</NavItem>
-                    <NavItem eventKey={2} href="#">Tietoja</NavItem>
                 </Nav>
 
                 <Nav pullRight>
-                    <NavItem eventKey={1} href="#">Link Right</NavItem>
+                    <NavItem eventKey={1} href="#">Tietoja</NavItem>
                 </Nav>
 
             </Navbar.Collapse>

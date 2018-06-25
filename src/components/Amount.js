@@ -18,7 +18,8 @@ class Amount extends Component {
 
 const style = {
     row: {
-        height: '30vh',
+        height: '23vh',
+        marginTop: '7vh',
         marginBottom: '25px'
     },
     col: {
