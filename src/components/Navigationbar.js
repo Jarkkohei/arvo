@@ -24,7 +24,7 @@ class Navigationbar extends Component {
 
                 <Navbar.Collapse>
                     <Nav>
-                        <LinkContainer to="/">
+                        <LinkContainer to="/main">
                             <NavItem>Pääsivu</NavItem>
                         </LinkContainer>
 
