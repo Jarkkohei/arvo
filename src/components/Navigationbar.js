@@ -1,32 +1,49 @@
 import React, { Component } from 'react'
 
 import { Navbar, Nav, NavItem } from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap';
+import { Link } from 'react-router-dom';
 
 class Navigationbar extends Component {
-  render() {
-    return (
-        <Navbar collapseOnSelect fixedTop fluid>
-            <Navbar.Header>
-                <Navbar.Brand><a href="#brand">A</a></Navbar.Brand>
+    render() {
+        return (
+            <Navbar collapseOnSelect fixedTop fluid>
+                <Navbar.Header>
+                    <Navbar.Brand><Link to="/">A</Link></Navbar.Brand>
 
-                <Navbar.Toggle />
-            </Navbar.Header>
+                    {/*
+                    <Link to={{
+                        pathname: '',
+                        hash: '#submit',
+                        search: '?something=true'
+                    }}>
+                    */}
 
-            <Navbar.Collapse>
-                <Nav>
-                    <NavItem eventKey={1} href="#">Pääsivu</NavItem>
-                    <NavItem eventKey={2} href="#">Asetukset</NavItem>
-                </Nav>
+                    <Navbar.Toggle />
+                </Navbar.Header>
 
-                <Nav pullRight>
-                    <NavItem eventKey={1} href="#">Tietoja</NavItem>
-                </Nav>
+                <Navbar.Collapse>
+                    <Nav>
+                        <LinkContainer to="/">
+                            <NavItem>Pääsivu</NavItem>
+                        </LinkContainer>
 
-            </Navbar.Collapse>
+                        <LinkContainer to="/settings">
+                            <NavItem>Asetukset</NavItem>
+                        </LinkContainer>
+                    </Nav>
 
-        </Navbar>
-    )
-  }
+                    <Nav pullRight>
+                        <LinkContainer to="/about">
+                            <NavItem>Tietoja</NavItem>
+                        </LinkContainer>
+                    </Nav>
+
+                </Navbar.Collapse>
+
+            </Navbar>
+        )
+    }
 }
 
 export default Navigationbar;
